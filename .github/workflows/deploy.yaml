@@ -22,15 +22,18 @@ jobs:
           node-version: 22.12.0
       
       - name: Install dependencies
-        run: npm install
-      
+        run: yarn install
+
       - name: Build project
-        run: npm run build
-        # env:
-        #   REACT_APP_WELCOME_TEXT: ${{vars.REACT_APP_WELCOME_TEXT}}
+        run: |
+          set -e
+          yarn run build
+
+      - name: Check build folder
+        run: ls -la ./dist
 
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: build
+          folder: dist
