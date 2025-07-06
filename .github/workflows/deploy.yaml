@@ -25,12 +25,7 @@ jobs:
         run: yarn install
 
       - name: Build project
-        run: |
-          set -e
-          yarn run build
-
-      - name: Check build folder
-        run: ls -la ./dist
+        run: yarn run build
 
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
