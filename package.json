@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "homepage": "https://VithleshAg.github.io/github-actions",
+  "homepage": "https://vithleshag.github.io/github-actions",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
