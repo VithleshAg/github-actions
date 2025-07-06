@@ -1,6 +1,6 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -16,11 +16,12 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <p>
+          {import.meta.env.VITE_APP_WELCOME_TEXT || "Welcome in Local mode"} -
           Github Actions
         </p>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

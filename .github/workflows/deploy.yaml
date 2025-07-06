@@ -26,6 +26,7 @@ jobs:
 
       - name: Build project
         run: yarn run build
+        env: ${{vars.REACT_APP_WELCOME_TEXT}}
 
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
